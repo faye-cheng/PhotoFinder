@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="Simple WebApp to access the Flickr API">
+    <meta name="author" content="Faye Cheng">
+    <title>PhotoFindr</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+<body>
+  <div class="container">
+      <div class="jumbotron" id="jumbotron">
+        <h1 id="heading">PhotoFindr</h1>
+        <p id="subheading">Quick access to your favorite images using the Flickr API.</p>
+        <div id="searchContainer">
+          <input type="text" id="searchBox" size="30" placeholder=" Browse photos..." title="Input search terms" onclick="clearSearchContents()" onenter="doSearch()"/>
+          <a class="btn btn-lg btn-success" href="#" role="button" id="searchButton" title="Click to search" onclick="doSearch()">Search</a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <span id="thumbnailsDiv"></span>
+
+    <div id="lightbox" class="lightbox" style="display:none">
+     <table class="lightbox_table">
+      <tr>
+      <td class="lightbox_table_cell" align="center">
+        <div class="lightbox_content">
+          <p></p>
+          <div class="lb-title-wrapper" id="lb-title-wrapper">
+            <div id="lb-title"></div>
+          </div>
+          <span class="lightbox-close" alt="Click to close image preview">
+            <i class="ion-android-close" aria-hidden="true"></i>
+          </span>
+          <div class="lb-arrow lb-prev" id="lb-arrow lb-prev">
+
+            <i class="ion-chevron-left" aria-hidden="true"></i>
+          </div>
+          <div class="lb-arrow lb-next" id= "lb-arrow lb-next">
+            <i class="ion-chevron-right" aria-hidden="true"></i>
+          </div>
+          <div class="lightbox-image" id="lightbox-image"/>
+            <img src ="#" id = "lb-image"/>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <a id="backToTopButton" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+  <a id="loadMoreButton" style="display: inline-block; display: none" class="btn btn-primary btn-lg" title="Click to load more images" role="button" data-toggle="tooltip">Load More</a>
+</div>
+<script type="text/javascript" src="javascript/photoFindr.js"></script>
+  </body>
+</html>

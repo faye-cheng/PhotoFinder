@@ -1,0 +1,295 @@
+/******************************************/
+/* BODY */
+/******************************************/
+
+html, body {
+  background: #acdfe8;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 40px;
+  color: white;
+  border-radius: 5px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-bottom: 100px;
+  padding-top: 80px;
+  background-color: white;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#jumbotron {
+  display: inline-block;
+  width: 100%;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 520px;
+}
+
+.thumbnailsDiv {
+  align-content: center;
+  padding-left: 5px;
+}
+
+#backToTopButton {
+    cursor: pointer;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 40px;
+    display:none;
+}
+
+#loadMoreButton {
+  display: inline-block;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 250px;
+  font-size: 1.5em;
+  align-content: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/******************************************/
+/* HEADERS */
+/******************************************/
+
+h1 {
+  text-align: center;
+}
+
+#heading {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 6em;
+  padding-top: 50px;
+}
+
+#subheading {
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 15px;
+}
+
+/******************************************/
+/* ICONS */
+/******************************************/
+
+.glyphicon-chevron-up {
+  padding-top: 8px;
+  font-size: 2em;
+}
+
+.ion {
+  font-size: 1em;
+  position: relative;
+  top: 10px;
+  opacity: 0.9;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+/******************************************/
+/* SEARCH AREA */
+/******************************************/
+
+#searchContainer {
+  width: 50%;
+  margin: 0 auto;
+}
+#searchBox {
+  height: 50px;
+  font-size:20px;
+  padding: 5px 0 0 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  position: relative;
+  padding-left: 10px;
+}
+
+#searchButton {
+  height: 50px;
+  width: 120px;
+  font-size: 1.5em;
+  padding: 10px;
+  vertical-align: bottom;
+}
+
+/******************************************/
+/* THUMBNAIL IMAGES */
+/******************************************/
+
+img {
+  height: 125px;
+  width: 200px;
+  margin: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img:hover {
+  opacity: 0.7;
+  height: 125px;
+  width: 205px;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/******************************************/
+/* LIGHTBOX */
+/******************************************/
+
+/* Includes the entire overlay */
+.lightbox {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, .8);
+    display: inline-block;
+    cursor: default;
+}
+
+/* Lightbox images */
+.lightbox-image img {
+  position: fixed;
+  left: 50%; /*more negative is more right*/
+  top: 12%;
+  transform: translate(-50%, 0);
+  width:1100px;
+  height: 650px;
+  border: 1px solid black;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.lightbox-image img:hover {
+  opacity: 1;
+  margin: 12px;
+}
+
+/* To align the contents of the lightbox in the center */
+
+.lightbox_table {
+    width:100%;
+    height:100%;
+}
+.lightbox_table_cell {
+    vertical-align:middle;
+ }
+
+ /******************************************/
+ /* LIGHTBOX CONTENTS */
+ /******************************************/
+
+.lb-arrow {
+  font-size: 5em;
+  font-family: arial;
+  color: black;
+  opacity: 0.8;
+  background-color: white;
+  border: 1px solid black;
+  width: 120px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.lb-arrow:hover {
+    opacity: 0.7;
+}
+
+/* Left arrow indicator */
+
+.lb-prev {
+  position: fixed;
+  left: 15%; /*more negative is more right*/
+  margin-top: 450px;
+  top: 0;
+  transform: translate(-15%, 0);
+  display: inline-block;
+  padding-right: 5px;
+  display: none;
+  border-radius: 15px 0 0 15px;
+}
+
+/* Right arrow indicator */
+
+.lb-next {
+  position: fixed;
+  left: 81%; /*more negative is more right*/
+  margin-top: 450px;
+  top: 0;
+  transform: translate(-15%, 0);
+  display: inline-block;
+  padding-left: 5px;
+  margin-left: 10px;
+  display: none;
+  border-radius: 0 15px 15px 0;
+}
+
+/* close */
+
+.lightbox-close {
+    position: fixed;
+    left: 50%; /*more negative is more right*/
+    top: 12.4%;
+    transform: translate(-50%, 0);
+    margin: 0 auto;
+    padding-left: 1230px;
+    cursor: pointer;
+    font-size: 5em;
+    opacity: 0.9;
+    width: 100%;
+    z-index: 11;
+}
+
+.ion-android-close {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+
+}
+
+.ion-android-close:hover {
+  opacity: 0.7;
+}
+
+
+/* Lightbox title elements */
+
+#lb-title {
+  display: inline;
+  font-family: helvetica, sans-serif;
+  color: black;
+  font-size: 1.2em;
+  height: auto;
+  opacity: 1;
+}
+
+.lb-title-wrapper {
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0 0 10px 10px;
+  background-color: white;
+  padding-bottom: 10px;
+  margin-left: 11px;
+  position: fixed;
+  left: 50%; /*more negative is more right*/
+  bottom: 0;
+  transform: translate(-50%, 0);
+  margin-bottom: 15%;
+  z-index: 12;
+  width: 1100px;
+}
