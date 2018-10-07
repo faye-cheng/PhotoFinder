@@ -1,7 +1,7 @@
-# PhotoFindr
+# PhotoFinder
 Faye Cheng
 
-A webpage with dynamic content built using the Flickr API and native Javascript.
+A webpage with dynamic content built using the Flicker Photos API and native Javascript.
 
 <p>View the webpage on my <a href="https://fhcheng.github.io">Github Pages</a>.
 
